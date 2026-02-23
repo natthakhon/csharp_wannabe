@@ -1,5 +1,6 @@
 [workspace]
 members = [
-    "my_models",
-    "repository_traits"
+    "my_models", "pgsql_provider",
+    "repository_traits",
+    "pgsql_provider", 
 ]

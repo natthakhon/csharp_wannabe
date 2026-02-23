@@ -1,0 +1,12 @@
+[package]
+name = "pgsql_provider"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+async-trait = "0.1.89"
+sqlx = { version = "0.8.6", features = ["postgres", "runtime-tokio-native-tls", "chrono", "macros"] }
+tokio = { version = "1.49.0", features = ["full"] }
+my_models = {path = "../my_models"}
+repository_traits = {path = "../repository_traits"}
+chrono = "0.4.43"
