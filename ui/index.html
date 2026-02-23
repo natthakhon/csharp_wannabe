@@ -50,26 +50,25 @@
 <body>
     <div class="container">
         <h2>Data Extraction Tool</h2>
-        <input type="text" placeholder="Server Address">
-        <input type="text" placeholder="Database Name">
-        <input type="text" placeholder="Table Name">
-        <button id="extract-btn">Run Extraction</button>
-        <input id="greet-input" placeholder="Enter a name...">
-        <button id="greet-btn">Run Extraction</button>
+        <input type="text" id="mystring" placeholder="my string">
+        <input type="number" id="myint" placeholder="my int">
+        <button id="extract-btn">OK</button>
         <p id="response"></p>
     </div>
     <script>
         // Access the Tauri invoke function
         const { invoke } = window.__TAURI__.core;
 
-        const btn = document.querySelector('#greet-btn');
-        const input = document.querySelector('#greet-input');
+        const btn = document.querySelector('#extract-btn');
+        const mi = document.querySelector('#myint');
+        const ms = document.querySelector('#mystring');
         const msg = document.querySelector('#response');
 
         btn.addEventListener('click', async () => {
             // Call the Rust function 'run_extraction'
             // Pass the 'name' argument as a JSON object
-            const result = await invoke('run_extraction', { name: input.value });
+            const myIntValue = parseInt(mi.value, 10);
+            const result = await invoke('insert', { mystring: ms.value,myint:myIntValue });
             msg.textContent = result;
         });
     </script>

@@ -27,3 +27,5 @@ tauri-plugin-log = "2"
 my_models = {path = "../my_models"}
 repository_traits = {path = "../repository_traits"}
 pgsql_provider = { path = "../pgsql_provider" }
+chrono = "0.4.43"
+async-trait = "0.1.89"
