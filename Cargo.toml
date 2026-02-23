@@ -3,4 +3,5 @@ members = [
     "my_models", "pgsql_provider",
     "repository_traits",
     "pgsql_provider", 
+    "desktop_ui"
 ]
