@@ -4,4 +4,4 @@ members = [
     "repository_traits",
     "pgsql_provider", 
     "desktop_ui"
-]
+, "service"]
